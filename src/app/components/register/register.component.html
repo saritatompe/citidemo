@@ -1,0 +1,94 @@
+<div class="container">
+<form class="" action='' method="POST">
+    <fieldset>
+        <div id="legend">
+            <legend class="text-primary">Register</legend>
+        </div>
+        <div class="form-group col-sm-9">
+          <label for="firstname">First Name:</label>
+          <input [(ngModel)]="user.firstname" type="text" minlength="5" maxlength="30" class="form-control" id="firstname" 
+          placeholder="First Name" name="firstname" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  required #firstname="ngModel">
+        <span *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="text-danger">
+            <span [hidden]="!firstname.errors.required"> Required feild!</span>
+            <span [hidden]="!firstname.errors.minlength">Name must be at least 5 characters long.</span>
+            <span [hidden]="!firstname.errors.pattern">Email format should be com
+                    </span>
+            <span [hidden]="!firstname.errors.maxlength">Name cannot be more than 30 characters long.</span>
+        </span>
+        </div>
+
+        <div class="form-group col-sm-9">
+            <label for="lastname">Last Name:</label>
+            <input [(ngModel)]="user.lastname" type="text" minlength="5" maxlength="30" class="form-control" id="lastname" placeholder="Last Name" name="lastname"
+             required #lastname="ngModel">
+            <span *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="text-danger">
+                <span [hidden]="!lastname.errors.required"> Required feild!</span>
+                <span [hidden]="!lastname.errors.minlength">Name must be at least 5 characters long.</span>
+                <span [hidden]="!lastname.errors.maxlength">Name cannot be more than 30 characters long.</span>
+            </span>
+        </div>
+
+        <div class="form-group col-sm-9">
+            <label for="password">Password:</label>
+            <input [(ngModel)]="user.password" type="password" minlength="5" maxlength="30" class="form-control" id="password"
+             placeholder="Password" name="password" required #password="ngModel">
+            <span *ngIf="password.errors && (password.dirty || password.touched)" class="text-danger">
+                <span [hidden]="!password.errors.required">Required feild!</span>
+                <span [hidden]="!password.errors.minlength">Name must be at least 5 characters long.</span>
+                <span [hidden]="!password.errors.maxlength">Name cannot be more than 30 characters long.</span>
+            </span>
+        </div>
+
+        <div class="form-group col-sm-9">
+            <label for="role">Role:</label>
+            <select class="selectpicker" [(ngModel)]="user.role" class="form-control" 
+            name="role" required #role="ngModel">
+                <option>Approver</option>
+                <option>User</option>
+              </select>
+              <span *ngIf="role.errors && (role.dirty || role.touched)" class="text-danger">
+                <span [hidden]="!role.errors.required">Required feild!</span>
+            </span>
+        </div>
+    
+
+       <!--<div class="form-group col-sm-9">
+            <label for="address">Address:</label>
+            <textarea  [(ngModel)]="user.address" type="text" class="form-control"
+             minlength="5" maxlength="30" id="address" required #address="ngModel" placeholder="Address" name="address" required></textarea >
+            <span *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="text-danger">
+            <span [hidden]="!firstname.errors.required"> Required feild!</span>
+            <span [hidden]="!firstname.errors.minlength">Name must be at least 5 characters long.</span>
+            <span [hidden]="!firstname.errors.maxlength">Name cannot be more than 30 characters long.</span>
+        </span>
+        </div>
+    
+        <div class="form-group col-sm-9">
+            <label for="contact">Contact:</label>
+            <input [(ngModel)]="user.contact" type="text" class="form-control" id="contact" placeholder="Contact"
+            minlength="5" maxlength="30" name="contact" required #contact="ngModel">
+            <span *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="text-danger">
+            <span [hidden]="!firstname.errors.required"> Required feild!</span>
+            <span [hidden]="!firstname.errors.minlength">Name must be at least 5 characters long.</span>
+            <span [hidden]="!firstname.errors.maxlength">Name cannot be more than 30 characters long.</span>
+        </span>
+        </div>
+        <div class="form-group col-sm-9">
+            <label for="sno">SNO:</label>
+            <input [(ngModel)]="user.sno" type="text" class="form-control" id="sno" placeholder="SNO" 
+            minlength="5" maxlength="30"name="sno" required #sno="ngModel">
+            <span *ngIf="sno.errors && (sno.dirty || sno.touched)" class="text-danger">
+            <span [hidden]="!sno.errors.required"> Required feild!</span>
+            <span [hidden]="!sno.errors.minlength">Name must be at least 5 characters long.</span>
+            <span [hidden]="!sno.errors.maxlength">Name cannot be more than 30 characters long.</span>
+        </span>
+        </div>
+
+    -->
+
+        <div class="form-group col-sm-9 text-center">
+            <button (click)="addUser(user)" class="btn btn-info text-center">Register</button>
+        </div>
+  </fieldset>
+</form>
+</div>

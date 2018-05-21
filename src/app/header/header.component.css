@@ -1,0 +1,59 @@
+.header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+}
+
+.row {
+     margin-right: none; 
+     margin-left: none; 
+}
+
+.navdecor{
+	background-color:#236AB9;
+}
+
+.navbar-default .navbar-nav>li>a {
+     color: #ffffff;
+     font-size: 16px;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #000;
+    background-color: #CCC;
+    opacity: 0.9;
+    -webkit-transition: 0.2s;
+}
+
+.hovicon.effect-1.sub-b:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #41ab6b;
+}
+
+.hovicon.effect-1.sub-b:hover i {
+    color: #41ab6b;
+}
+
+.hovicon.effect-1.sub-b:after {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.hovicon.effect-1.sub-b:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+.usericon{
+	height: 33px;
+    margin-right: 10px;
+    width: 33px;
+}
+.customMargin{
+	margin-left: -15px;
+}

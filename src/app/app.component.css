@@ -1,0 +1,22 @@
+body {
+	background: #F9F9F9;
+}
+.cardholder {
+	width:40%;
+	margin:auto;
+}
+.margindiv{
+	margin-bottom: 17px;
+	margin-top: 17px;
+}
+.centered{
+	margin-left: 31%;
+    margin-top: 18px;
+}
+.page-container {
+	background: #F5F5F;
+}
+.page-content {
+	margin: 25px auto;
+	width: 92%;
+}

@@ -1,0 +1,30 @@
+<h1>Loan Apply:</h1>
+<div class="export-container"><br/>
+  <form (ngSubmit)="submitLoan(firstname,lastname,loan_amount)" #userLoanForm="ngForm">
+    <div class="form-group">
+      <div class="mat-app-background basic-container">
+        <div class="col-md-2" >
+          <label>FirstName</label><br/><br/>
+          <input type="text" required id="firstname" [(ngModel)]="firstname" name="firstname" class="form-control" placeholder="firstname" required autofocus>
+        </div>
+        <div class="col-md-2" >
+          <label>LastName</label><br/><br/>
+          <input type="text" required id="lastname" [(ngModel)]="lastname" name="lastname" class="form-control" placeholder="lastname" required autofocus>
+        </div>
+        <div class="col-md-2" >
+            <label>Amount</label><br/><br/>
+            <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required id="loan_amount" [(ngModel)]="loan_amount" name="loan_amount" class="form-control" placeholder="loan amount(Enter number format)" required autofocus>
+        </div>
+        <div class="col-md-2" >
+            <label>Status</label><br/><br/>
+            <label>{{loan_status}}</label>
+        </div>
+        <div class="col-md-1">
+          <div class="button login "><br/>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="!userLoanForm.form.valid || !isFormValid ">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

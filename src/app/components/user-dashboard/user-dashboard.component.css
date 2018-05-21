@@ -1,0 +1,18 @@
+.user {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #CCC;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container {
+  width: 70%;
+}
+
+mat-slider {
+	width: 100%;
+}
+
+.logout {
+	margin-top: 40px;
+}

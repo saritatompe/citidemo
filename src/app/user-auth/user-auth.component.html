@@ -1,0 +1,24 @@
+<div class="export-container">
+  <div class="col-md-3 col-md-offset-4">
+      <div class="mat-app-background basic-container">
+        
+          <div class="box">
+            <div class="title">LOGIN</div>
+              <div class="input">
+                <input type="text" id="inputEmail" [(ngModel)]="username" name="username" class="form-control" placeholder="User Name" required autofocus>
+              </div>
+              <div class="input">
+                  <input type="password" id="inputPassword" name="password" [(ngModel)]="password" class="form-control" placeholder="Password" required>
+              </div>
+              <div class="button login">
+                  <button (click)="getUser(username,password)" class="btn btn-lg btn-primary btn-block btn-signin" type="button">Sign in</button>
+              </div>
+              <a href="" class="pass-forgot">Forgot your password?</a>
+            </div> 
+        
+      </div>
+  </div>
+</div>
+      <!-- Copyright 2018 Google Inc. All Rights Reserved.
+          Use of this source code is governed by an MIT-style license that
+          can be found in the LICENSE file at http://angular.io/license -->
